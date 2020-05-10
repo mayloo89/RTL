@@ -3,7 +3,11 @@
   <body>
     <form method="POST" oninput="s_pa_r.value=parseInt(cant_r.value)*parseInt(mpa_r.value)
                                  s_pb_r.value=parseInt(cant_r.value)*parseInt(mpb_r.value)
-                                 s_pp_r.value=parseInt(cant_r.value)*parseInt(mpp_r.value)">
+                                 s_pp_r.value=parseInt(cant_r.value)*parseInt(mpp_r.value)
+                                 
+                                 s_pa_p.value=parseInt(cant_p.value)*parseInt(mpa_p.value)
+                                 s_pb_p.value=parseInt(cant_p.value)*parseInt(mpb_p.value)
+                                 s_pp_p.value=parseInt(cant_p.value)*parseInt(mpp_p.value)">
       <h1>Orden de pedido</h1>
       <p>En la siguiente tabla se puede armar un pedido y ver los posibles costos 
          del mismo según el monto total.</p>
@@ -30,6 +34,19 @@
           <td><input type="number" value="300" id="mpp_r" readonly></td>
           <td><output name="s_pp_r" for="cant_r pp_r"></output></td>
         </tr>
+
+        
+        <tr>
+          <th>Pad</th>
+          <td><input type="number" min="0" max="999" value="0" id="cant_p"></td>
+          <td><input type="number" value="100" id="mpa_p" readonly></td>
+          <td><output name="s_pa_p" for="cant_p mpa_p"></output></td>
+          <td><input type="number" value="200" id="mpb_p" readonly></td>
+          <td><output name="s_pb_p" for="cant_p mpb_p"></output></td>
+          <td><input type="number" value="300" id="mpp_p" readonly></td>
+          <td><output name="s_pp_p" for="cant_p pp_p"></output></td>
+        </tr>
+
         
         <tr>
           <th>Pad</th>
