@@ -1,0 +1,20 @@
+input[type=number] {
+	width: 70px;
+}
+
+.precio {
+	border: 0px;
+	width: 50px;
+}
+
+/* Firefox */
+.precio {
+  -moz-appearance: textfield;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.precio input::-webkit-outer-spin-button,
+.precio input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
