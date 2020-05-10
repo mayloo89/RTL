@@ -1,5 +1,8 @@
 <!DOCTYPE html5>
 <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+  </head>
   <body>
     <form method="POST" oninput="s_pa_r.value=parseInt(cant_r.value)*parseInt(mpa_r.value)
                                  s_pb_r.value=parseInt(cant_r.value)*parseInt(mpb_r.value)
@@ -7,7 +10,15 @@
                                  
                                  s_pa_p.value=parseInt(cant_p.value)*parseInt(mpa_p.value)
                                  s_pb_p.value=parseInt(cant_p.value)*parseInt(mpb_p.value)
-                                 s_pp_p.value=parseInt(cant_p.value)*parseInt(mpp_p.value)">
+                                 s_pp_p.value=parseInt(cant_p.value)*parseInt(mpp_p.value)
+                                 
+                                 s_pa_pss.value=parseInt(cant_pss.value)*parseInt(mpa_pss.value)
+                                 s_pb_pss.value=parseInt(cant_pss.value)*parseInt(mpb_pss.value)
+                                 s_pp_pss.value=parseInt(cant_pss.value)*parseInt(mpp_pss.value)
+                                 
+                                 s_pa_b.value=parseInt(cant_b.value)*parseInt(mpa_b.value)
+                                 s_pb_b.value=parseInt(cant_b.value)*parseInt(mpb_b.value)
+                                 s_pp_b.value=parseInt(cant_b.value)*parseInt(mpp_b.value)">
       <h1>Orden de pedido</h1>
       <p>En la siguiente tabla se puede armar un pedido y ver los posibles costos 
          del mismo según el monto total.</p>
@@ -27,58 +38,45 @@
         <tr>
           <th>Refuerzo</th>
           <td><input type="number" min="0" max="999" value="0" id="cant_r"></td>
-          <td><input type="number" value="100" id="mpa_r" readonly></td>
-          <td><output name="s_pa_r" for="cant_r mpa_r"></output></td>
-          <td><input type="number" value="200" id="mpb_r" readonly></td>
-          <td><output name="s_pb_r" for="cant_r mpb_r"></output></td>
-          <td><input type="number" value="300" id="mpp_r" readonly></td>
-          <td><output name="s_pp_r" for="cant_r pp_r"></output></td>
+          <td>$<input type="number" value="95" id="mpa_r" readonly class="precio"></td>
+          <td>$<output name="s_pa_r" for="cant_r mpa_r"></output></td>
+          <td>$<input type="number" value="73" id="mpb_r" readonly class="precio"></td>
+          <td>$<output name="s_pb_r" for="cant_r mpb_r"></output></td>
+          <td>$<input type="number" value="62" id="mpp_r" readonly class="precio"></td>
+          <td>$<output name="s_pp_r" for="cant_r pp_r"></output></td>
         </tr>
-
-        
+ 
         <tr>
           <th>Pad</th>
           <td><input type="number" min="0" max="999" value="0" id="cant_p"></td>
-          <td><input type="number" value="100" id="mpa_p" readonly></td>
-          <td><output name="s_pa_p" for="cant_p mpa_p"></output></td>
-          <td><input type="number" value="200" id="mpb_p" readonly></td>
-          <td><output name="s_pb_p" for="cant_p mpb_p"></output></td>
-          <td><input type="number" value="300" id="mpp_p" readonly></td>
-          <td><output name="s_pp_p" for="cant_p pp_p"></output></td>
+          <td>$<input type="number" value="181" id="mpa_p" readonly class="precio"></td>
+          <td>$<output name="s_pa_p" for="cant_p mpa_p"></output></td>
+          <td>$<input type="number" value="139" id="mpb_p" readonly class="precio"></td>
+          <td>$<output name="s_pb_p" for="cant_p mpb_p"></output></td>
+          <td>$<input type="number" value="117" id="mpp_p" readonly class="precio"></td>
+          <td>$<output name="s_pp_p" for="cant_p pp_p"></output></td>
         </tr>
 
-        
-        <tr>
-          <th>Pad</th>
-          <td><input type="number" min="0" max="999" value="0"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        
         <tr>
           <th>Pad Siempre Seco</th>
-          <td><input type="number" min="0" max="999" value="0"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><input type="number" min="0" max="999" value="0" id="cant_pss"></td>
+          <td>$<input type="number" value="181" id="mpa_pss" readonly class="precio"></td>
+          <td>$<output name="s_pa_pss" for="cant_pss mpa_pss"></output></td>
+          <td>$<input type="number" value="139" id="mpb_pss" readonly class="precio"></td>
+          <td>$<output name="s_pb_pss" for="cant_pss mpb_pss"></output></td>
+          <td>$<input type="number" value="117" id="mpp_pss" readonly class="precio"></td>
+          <td>$<output name="s_pp_pss" for="cant_pss pp_pss"></output></td>
         </tr>
-        
+
         <tr>
           <th>Base</th>
-          <td><input type="number" min="0" max="999" value="0"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><input type="number" min="0" max="999" value="0" id="cant_b"></td>
+          <td>$<input type="number" value="219" id="mpa_b" readonly class="precio"></td>
+          <td>$<output name="s_pa_b" for="cant_pss mpa_b"></output></td>
+          <td>$<input type="number" value="169" id="mpb_b" readonly class="precio"></td>
+          <td>$<output name="s_pb_b" for="cant_pss mpb_b"></output></td>
+          <td>$<input type="number" value="142" id="mpp_b" readonly class="precio"></td>
+          <td>$<output name="s_pp_b" for="cant_pss pp_b"></output></td>
         </tr>
         
         <tr>
