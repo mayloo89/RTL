@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
+    <meta charset="UTF-8">
     <title>Recibe Tu Luna</title>
     <link rel="stylesheet" type="text/css" href="estilo.css">
   </head>
@@ -19,7 +20,19 @@
                                  
                                  s_pa_b.value=parseInt(cant_b.value)*parseInt(mpa_b.value)
                                  s_pb_b.value=parseInt(cant_b.value)*parseInt(mpb_b.value)
-                                 s_pp_b.value=parseInt(cant_b.value)*parseInt(mpp_b.value)">
+                                 s_pp_b.value=parseInt(cant_b.value)*parseInt(mpp_b.value)
+                                 
+                                 s_pa_taiop.value=parseInt(cant_taiop.value)*parseInt(mpa_taiop.value)
+                                 s_pb_taiop.value=parseInt(cant_taiop.value)*parseInt(mpb_taiop.value)
+                                 s_pp_taiop.value=parseInt(cant_taiop.value)*parseInt(mpp_taiop.value)
+
+                                 s_pa_taios.value=parseInt(cant_taios.value)*parseInt(mpa_taios.value)
+                                 s_pb_taios.value=parseInt(cant_taios.value)*parseInt(mpb_taios.value)
+                                 s_pp_taios.value=parseInt(cant_taios.value)*parseInt(mpp_taios.value)
+                                 
+                                 s_pa_kln.value=parseInt(cant_kln.value)*parseInt(mpa_kln.value)
+                                 s_pb_kln.value=parseInt(cant_kln.value)*parseInt(mpb_kln.value)
+                                 s_pp_kln.value=parseInt(cant_kln.value)*parseInt(mpp_kln.value)">
       <h1>Orden de pedido</h1>
       <p>En la siguiente tabla se puede armar un pedido y ver los posibles costos 
          del mismo según el monto total.</p>
@@ -40,132 +53,143 @@
           <th>Refuerzo</th>
           <td><input type="number" min="0" max="999" value="0" id="cant_r"></td>
           <td>$<input type="number" value="95" id="mpa_r" readonly class="precio"></td>
-          <td>$<output name="s_pa_r" for="cant_r mpa_r"></output></td>
+          <td>$<output name="s_pa_r" for="cant_r mpa_r">00</output></td>
           <td>$<input type="number" value="73" id="mpb_r" readonly class="precio"></td>
-          <td>$<output name="s_pb_r" for="cant_r mpb_r"></output></td>
+          <td>$<output name="s_pb_r" for="cant_r mpb_r">0</output></td>
           <td>$<input type="number" value="62" id="mpp_r" readonly class="precio"></td>
-          <td>$<output name="s_pp_r" for="cant_r pp_r"></output></td>
+          <td>$<output name="s_pp_r" for="cant_r pp_r">0</output></td>
         </tr>
  
         <tr>
           <th>Pad</th>
           <td><input type="number" min="0" max="999" value="0" id="cant_p"></td>
           <td>$<input type="number" value="181" id="mpa_p" readonly class="precio"></td>
-          <td>$<output name="s_pa_p" for="cant_p mpa_p"></output></td>
+          <td>$<output name="s_pa_p" for="cant_p mpa_p">0</output></td>
           <td>$<input type="number" value="139" id="mpb_p" readonly class="precio"></td>
-          <td>$<output name="s_pb_p" for="cant_p mpb_p"></output></td>
+          <td>$<output name="s_pb_p" for="cant_p mpb_p">0</output></td>
           <td>$<input type="number" value="117" id="mpp_p" readonly class="precio"></td>
-          <td>$<output name="s_pp_p" for="cant_p pp_p"></output></td>
+          <td>$<output name="s_pp_p" for="cant_p pp_p">0</output></td>
         </tr>
 
         <tr>
           <th>Pad Siempre Seco</th>
           <td><input type="number" min="0" max="999" value="0" id="cant_pss"></td>
           <td>$<input type="number" value="181" id="mpa_pss" readonly class="precio"></td>
-          <td>$<output name="s_pa_pss" for="cant_pss mpa_pss"></output></td>
+          <td>$<output name="s_pa_pss" for="cant_pss mpa_pss">0</output></td>
           <td>$<input type="number" value="139" id="mpb_pss" readonly class="precio"></td>
-          <td>$<output name="s_pb_pss" for="cant_pss mpb_pss"></output></td>
+          <td>$<output name="s_pb_pss" for="cant_pss mpb_pss">0</output></td>
           <td>$<input type="number" value="117" id="mpp_pss" readonly class="precio"></td>
-          <td>$<output name="s_pp_pss" for="cant_pss pp_pss"></output></td>
+          <td>$<output name="s_pp_pss" for="cant_pss pp_pss">0</output></td>
         </tr>
 
         <tr>
           <th>Base</th>
           <td><input type="number" min="0" max="999" value="0" id="cant_b"></td>
           <td>$<input type="number" value="219" id="mpa_b" readonly class="precio"></td>
-          <td>$<output name="s_pa_b" for="cant_pss mpa_b"></output></td>
+          <td>$<output name="s_pa_b" for="cant_pss mpa_b">0</output></td>
           <td>$<input type="number" value="169" id="mpb_b" readonly class="precio"></td>
-          <td>$<output name="s_pb_b" for="cant_pss mpb_b"></output></td>
+          <td>$<output name="s_pb_b" for="cant_pss mpb_b">0</output></td>
           <td>$<input type="number" value="142" id="mpp_b" readonly class="precio"></td>
-          <td>$<output name="s_pp_b" for="cant_pss pp_b"></output></td>
+          <td>$<output name="s_pp_b" for="cant_pss pp_b">0</output></td>
+        </tr>
+
+        <tr>
+          <th>Toallita AIO Petit</th>
+          <td><input type="number" min="0" max="999" value="0" id="cant_taiop"></td>
+          <td>$<input type="number" value="345" id="mpa_taiop" readonly class="precio"></td>
+          <td>$<output name="s_pa_taiop" for="cant_pss mpa_taiop">0</output></td>
+          <td>$<input type="number" value="266" id="mpb_taiop" readonly class="precio"></td>
+          <td>$<output name="s_pb_taiop" for="cant_pss mpb_taiop">0</output></td>
+          <td>$<input type="number" value="224" id="mpp_taiop" readonly class="precio"></td>
+          <td>$<output name="s_pp_taiop" for="cant_pss pp_taiop">0</output></td>
         </tr>
         
         <tr>
           <th>Toallita AIO Standard</th>
-          <td><input type="number" min="0" max="999" value="0"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><input type="number" min="0" max="999" value="0" id="cant_taios"></td>
+          <td>$<input type="number" value="360" id="mpa_taios" readonly class="precio"></td>
+          <td>$<output name="s_pa_taios" for="cant_taios mpa_taios">0</output></td>
+          <td>$<input type="number" value="277" id="mpb_taios" readonly class="precio"></td>
+          <td>$<output name="s_pb_taios" for="cant_taios mpb_taios">0</output></td>
+          <td>$<input type="number" value="234" id="mpp_taios" readonly class="precio"></td>
+          <td>$<output name="s_pp_taios" for="cant_taios pp_taios">0</output></td>
         </tr>
-        
+
         <tr>
           <th>Kit Luna Nueva</th>
-          <td><input type="number" min="0" max="999" value="0"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><input type="number" min="0" max="999" value="0" id="cant_kln"></td>
+          <td>$<input type="number" value="1100" id="mpa_kln" readonly class="precio"></td>
+          <td>$<output name="s_pa_kln" for="cant_kln mpa_kln">0</output></td>
+          <td>$<input type="number" value="847" id="mpb_kln" readonly class="precio"></td>
+          <td>$<output name="s_pb_kln" for="cant_klm mpb_kln">0</output></td>
+          <td>$<input type="number" value="715" id="mpp_kln" readonly class="precio"></td>
+          <td>$<output name="s_pp_kln" for="cant_kln pp_kln">0</output></td>
         </tr>
-        
+
         <tr>
           <th>Combo Mix</th>
-          <td><input type="number" min="0" max="999" value="0"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><input type="number" min="0" max="999" value="0" id="cant_cm"></td>
+          <td>$<input type="number" value="1275" id="mpa_cm" readonly class="precio"></td>
+          <td>$<output name="s_pa_cm" for="cant_cm mpa_cm">0</output></td>
+          <td>$<input type="number" value="982" id="mpb_cm" readonly class="precio"></td>
+          <td>$<output name="s_pb_cm" for="cant_cm mpb_cm">0</output></td>
+          <td>$<input type="number" value="829" id="mpp_cm" readonly class="precio"></td>
+          <td>$<output name="s_pp_cm" for="cant_cm pp_cm">0</output></td>
         </tr>
         
         <tr>
-          <th>Kit Protectores Diarios </th>
-          <td><input type="number" min="0" max="999" value="0"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <th>Kit de Protectores Diarios</th>
+          <td><input type="number" min="0" max="999" value="0" id="cant_kpd"></td>
+          <td>$<input type="number" value="590" id="mpa_kpd" readonly class="precio"></td>
+          <td>$<output name="s_pa_kpd" for="cant_kpd mpa_kpd">0</output></td>
+          <td>$<input type="number" value="455" id="mpb_kpd" readonly class="precio"></td>
+          <td>$<output name="s_pb_kpd" for="cant_kpd mpb_kpd">0</output></td>
+          <td>$<input type="number" value="384" id="mpp_kpd" readonly class="precio"></td>
+          <td>$<output name="s_pp_kpd" for="cant_kpd pp_kpd">0</output></td>
         </tr>
         
         <tr>
-          <th>Kit P. Diarios Antitraspaso</th>
-          <td><input type="number" min="0" max="999" value="0"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <th>Kit de Protectores Diarios Antitraspaso</th>
+          <td><input type="number" min="0" max="999" value="0" id="cant_kpda"></td>
+          <td>$<input type="number" value="640" id="mpa_kpda" readonly class="precio"></td>
+          <td>$<output name="s_pa_kpda" for="cant_kpda mpa_kpda">0</output></td>
+          <td>$<input type="number" value="493" id="mpb_kpda" readonly class="precio"></td>
+          <td>$<output name="s_pb_kpda" for="cant_kpda mpb_kpda">0</output></td>
+          <td>$<input type="number" value="416" id="mpp_kpda" readonly class="precio"></td>
+          <td>$<output name="s_pp_kpda" for="cant_kpda pp_kpda">0</output></td>
+        </tr>
+
+        <tr>
+          <th>Kit de Protectores Diarios S.Seco</th>
+          <td><input type="number" min="0" max="999" value="0" id="cant_kpdss"></td>
+          <td>$<input type="number" value="640" id="mpa_kpdss" readonly class="precio"></td>
+          <td>$<output name="s_pa_kpdss" for="cant_kpdss mpa_kpdss">0</output></td>
+          <td>$<input type="number" value="493" id="mpb_kpdss" readonly class="precio"></td>
+          <td>$<output name="s_pb_kpdss" for="cant_kpdss mpb_kpdss">0</output></td>
+          <td>$<input type="number" value="416" id="mpp_kpdss" readonly class="precio"></td>
+          <td>$<output name="s_pp_kpdss" for="cant_kpdss pp_kpdss">0</output></td>
         </tr>
         
         <tr>
-          <th>Kit P. Diarios  Antitraspaso S.Seco</th>
-          <td><input type="number" min="0" max="999" value="0"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <th>Kit de Protectores Diarios Tanga</th>
+          <td><input type="number" min="0" max="999" value="0" id="cant_kpdt"></td>
+          <td>$<input type="number" value="590" id="mpa_kpdt" readonly class="precio"></td>
+          <td>$<output name="s_pa_kpdt" for="cant_kpdt mpa_kpdt">0</output></td>
+          <td>$<input type="number" value="455" id="mpb_kpdt" readonly class="precio"></td>
+          <td>$<output name="s_pb_kpdt" for="cant_kpdt mpb_kpdt">0</output></td>
+          <td>$<input type="number" value="384" id="mpp_kpdt" readonly class="precio"></td>
+          <td>$<output name="s_pp_kpdt" for="cant_kpdt pp_kpdt">0</output></td>
         </tr>
         
         <tr>
-          <th>Kit Protectores Diarios Tanga</th>
-          <td><input type="number" min="0" max="999" value="0"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        
-        <tr>
-          <th>Kit P. Diarios Tanga Antitraspaso</th>
-          <td><input type="number" min="0" max="999" value="0"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <th>Kit de P. Diarios Tanga Antitraspaso</th>
+          <td><input type="number" min="0" max="999" value="0" id="cant_kpdta"></td>
+          <td>$<input type="number" value="640" id="mpa_kpdta" readonly class="precio"></td>
+          <td>$<output name="s_pa_kpdta" for="cant_kpdta mpa_kpdta">0</output></td>
+          <td>$<input type="numbera" value="493" id="mpb_kpdta" readonly class="precio"></td>
+          <td>$<output name="s_pb_kpdta" for="cant_kpdta mpb_kpdta">0</output></td>
+          <td>$<input type="number" value="416" id="mpp_kpdta" readonly class="precio"></td>
+          <td>$<output name="s_pp_kpdta" for="cant_kpdta pp_kpdta">0</output></td>
         </tr>
         
       </table>
