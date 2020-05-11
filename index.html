@@ -56,7 +56,22 @@
                                  
                                  s_pa_kpdta.value=parseInt(cant_kpdta.value)*parseInt(mpa_kpdta.value)
                                  s_pb_kpdta.value=parseInt(cant_kpdta.value)*parseInt(mpb_kpdta.value)
-                                 s_pp_kpdta.value=parseInt(cant_kpdta.value)*parseInt(mpp_kpdta.value)">
+                                 s_pp_kpdta.value=parseInt(cant_kpdta.value)*parseInt(mpp_kpdta.value)
+                                 
+                                 t_pa.value=parseInt(s_pa_r.value)+parseInt(s_pa_p.value)+parseInt(s_pa_pss.value)
+                                            +parseInt(s_pa_b.value)+parseInt(s_pa_taiop.value)+parseInt(s_pa_taios.value)
+                                            +parseInt(s_pa_kln.value)+parseInt(s_pa_cm.value)+parseInt(s_pa_kpd.value)+parseInt(s_pa_kpda.value)
+                                            +parseInt(s_pa_kpdss.value)+parseInt(s_pa_kpdt.value)+parseInt(s_pa_kpdta.value)
+                                 
+                                 t_pb.value=parseInt(s_pb_r.value)+parseInt(s_pb_p.value)+parseInt(s_pb_pss.value)
+                                            +parseInt(s_pb_b.value)+parseInt(s_pb_taiop.value)+parseInt(s_pb_taios.value)
+                                            +parseInt(s_pb_kln.value)+parseInt(s_pb_cm.value)+parseInt(s_pb_kpd.value)+parseInt(s_pb_kpda.value)
+                                            +parseInt(s_pb_kpdss.value)+parseInt(s_pb_kpdt.value)+parseInt(s_pb_kpdta.value)
+                                 
+                                 t_pp.value=parseInt(s_pp_r.value)+parseInt(s_pp_p.value)+parseInt(s_pp_pss.value)
+                                            +parseInt(s_pp_b.value)+parseInt(s_pp_taiop.value)+parseInt(s_pp_taios.value)
+                                            +parseInt(s_pp_kln.value)+parseInt(s_pp_cm.value)+parseInt(s_pp_kpd.value)+parseInt(s_pp_kpda.value)
+                                            +parseInt(s_pp_kpdss.value)+parseInt(s_pp_kpdt.value)+parseInt(s_pp_kpdta.value)">
       <h1>Orden de pedido</h1>
       <p>En la siguiente tabla se puede armar un pedido y ver los posibles costos 
          del mismo según el monto total.</p>
@@ -210,10 +225,27 @@
           <td><input type="number" min="0" max="999" value="0" id="cant_kpdta"></td>
           <td>$<input type="number" value="640" id="mpa_kpdta" readonly class="precio"></td>
           <td>$<output name="s_pa_kpdta" for="cant_kpdta mpa_kpdta">0</output></td>
-          <td>$<input type="numbera" value="493" id="mpb_kpdta" readonly class="precio"></td>
+          <td>$<input type="number" value="493" id="mpb_kpdta" readonly class="precio"></td>
           <td>$<output name="s_pb_kpdta" for="cant_kpdta mpb_kpdta">0</output></td>
           <td>$<input type="number" value="416" id="mpp_kpdta" readonly class="precio"></td>
           <td>$<output name="s_pp_kpdta" for="cant_kpdta pp_kpdta">0</output></td>
+        </tr>
+        <tr>
+        
+          <th>TOTAL</th>
+          <td></td>
+          <td></td>
+          <td>$<output name="t_pa" for="s_pa_r s_pa_p s_pa_pss s_pa_b s_pa_taiop 
+                                        s_pa_taios s_pa_kln s_pa_cm s_pa_kpd s_pa_kpda 
+                                        s_pa_kpdss s_pa_kpdt s_pa_kpdta">0</output></td>
+          <td></td>
+          <td>$<output name="t_pb" for="s_pb_r s_pb_p s_pb_pss s_pb_b s_pb_taiop 
+                                        s_pb_taios s_pb_kln s_pb_cm s_pb_kpd s_pb_kpda 
+                                        s_pb_kpdss s_pb_kpdt s_pb_kpdta">0</output></td>
+          <td></td>
+          <td>$<output name="t_pp" for="s_pp_r s_pp_p s_pp_pss s_pp_b s_pp_taiop 
+                                        s_pp_taios s_pp_kln s_pp_cm s_pp_kpd s_pp_kpda 
+                                        s_pp_kpdss s_pp_kpdt s_pp_kpdta">0</output></td>
         </tr>
         
       </table>
